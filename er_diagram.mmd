@@ -1,0 +1,20 @@
+erDiagram
+    USER ||--o{ GRIEVANCE : submits
+    DEPARTMENT ||--o{ GRIEVANCE : assigned_to
+    USER ||--o{ GRIEVANCE_HISTORY : changes
+    GRIEVANCE ||--o{ GRIEVANCE_HISTORY : has
+    GRIEVANCE ||--o{ ATTACHMENT : has
+    GRIEVANCE ||--o{ DEPARTMENT_ASSIGNMENT : has
+    DEPARTMENT ||--o{ DEPARTMENT_ASSIGNMENT : receives
+    GRIEVANCE ||--o{ ACTION_TAKEN_REPORT : has
+    USER ||--o{ ACTION_TAKEN_REPORT : submits
+    GRIEVANCE ||--o| CITIZEN_FEEDBACK : receives
+    USER ||--o{ DEPARTMENT_ASSIGNMENT : assigns
+    CONTACT_ENQUIRY {
+        int id PK
+        string name
+        string email
+        string subject
+        text message
+        datetime created_at
+    }

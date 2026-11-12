@@ -1,0 +1,9 @@
+flowchart TD
+    U[Citizens / CMO / Officers] --> FE[React + Vite]
+    FE --> API[Django REST Framework]
+    API --> JWT[JWT + Role Permissions]
+    API --> DB[(PostgreSQL)]
+    API --> AI[AI Assistant]
+    AI --> EXT[Google GenAI]
+    AI --> FB[Local Fallback]
+    API --> MEDIA[Uploaded Media]
